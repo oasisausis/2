@@ -366,6 +366,65 @@ body.home #guide-grid > .dashboard-card.card-equal:nth-child(5) {
   body.home .dashboard-intro > div {
     max-width: 1150px;
   }
+</style><style id="homepage-card-photo-treatment">
+/* Homepage photo cards: clear images + guaranteed readable typography */
+body.home #guide-grid .dashboard-card > img {
+  display: block;
+  object-fit: cover;
+  opacity: 1;
+  filter: saturate(.9) contrast(1.08) brightness(.82);
+}
+
+body.home #guide-grid .dashboard-card-content {
+  text-shadow: 0 2px 12px rgba(0,0,0,.72);
+}
+
+body.home #guide-grid .dashboard-card-content h2,
+body.home #guide-grid .dashboard-card-content p,
+body.home #guide-grid .card-label {
+  position: relative;
+  z-index: 2;
+}
+
+body.home #guide-grid .academic-card > img { object-position: 50% 46%; }
+body.home #guide-grid .campus-card > img { object-position: 50% 58%; }
+body.home #guide-grid .transport-card > img { object-position: 50% 72%; }
+body.home #guide-grid .seniors-card > img { object-position: 50% 54%; }
+body.home #guide-grid .clubs-card > img { object-position: 50% 58%; }
+body.home #guide-grid .updates-card > img { object-position: 50% 52%; }
+body.home #guide-grid .emergency-card > img { object-position: 50% 48%; }
+
+body.home #guide-grid .academic-card .card-shade {
+  background: linear-gradient(180deg, rgba(6,15,34,.28), rgba(18,32,74,.76) 48%, rgba(7,13,30,.97));
+}
+body.home #guide-grid .campus-card .card-shade {
+  background: linear-gradient(180deg, rgba(17,35,18,.22), rgba(43,56,26,.68) 48%, rgba(11,20,14,.96));
+}
+body.home #guide-grid .transport-card .card-shade {
+  background: linear-gradient(180deg, rgba(8,24,46,.24), rgba(22,49,88,.72) 49%, rgba(7,17,34,.97));
+}
+body.home #guide-grid .seniors-card .card-shade {
+  background: linear-gradient(180deg, rgba(43,22,58,.18), rgba(76,44,96,.72) 48%, rgba(31,17,45,.97));
+}
+body.home #guide-grid .clubs-card .card-shade {
+  background: linear-gradient(180deg, rgba(4,39,41,.17), rgba(7,73,70,.70) 48%, rgba(4,25,30,.97));
+}
+body.home #guide-grid .updates-card .card-shade {
+  background: linear-gradient(180deg, rgba(25,20,61,.17), rgba(43,43,105,.74) 48%, rgba(18,18,52,.97));
+}
+body.home #guide-grid .emergency-card .card-shade {
+  background: linear-gradient(180deg, rgba(83,18,24,.28), rgba(152,48,50,.79) 46%, rgba(94,25,31,.97));
+}
+
+body.home #guide-grid .seniors-card,
+body.home #guide-grid .updates-card,
+body.home #guide-grid .emergency-card {
+  background: #111827;
+}
+
+body.home #guide-grid .portrait-stack { opacity: .38; }
+body.home #guide-grid .emergency-rings { opacity: .45; }
+body.home #guide-grid .emergency-card::before { opacity: .55; }
 </style></head>
 <body class="home physics-dashboard-page">
 <a class="skip-link" href="#guide-grid">Skip to guide</a>
@@ -395,20 +454,19 @@ body.home #guide-grid > .dashboard-card.card-equal:nth-child(5) {
 </nav>
 <main class="dashboard-main">
 <header class="dashboard-intro">
-  <div>
-    <p class="dashboard-kicker">
+<div>
+<p class="dashboard-kicker">
       MSc Physics · IIT Bombay · Batch ’27
     </p>
-
-    <h1>
+<h1>
       A fresher’s guide to surviving
       <span>Master’s life.</span>
-    </h1>
-  </div>
+</h1>
+</div>
 </header>
 <section aria-label="Fresher guide sections" class="dashboard-grid" id="guide-grid">
 <a class="dashboard-card academic-card card-equal" data-tilt="" href="./academics.html">
-<img alt="Lecture hall at IIT Bombay" onerror="this.style.display='none'" src="./assets/lecture-hall.webp"/>
+<img alt="Historic group photograph of leading physicists" onerror="this.style.display='none'" src="./assets/academics-hero.webp"/>
 <div class="card-shade"></div>
 <div class="card-topline"><span class="card-index">01</span><span class="card-symbol">📚</span></div>
 <div class="dashboard-card-content">
@@ -419,7 +477,7 @@ body.home #guide-grid > .dashboard-card.card-equal:nth-child(5) {
 </div>
 <span class="card-equation">SPI = Σ(cᵢgᵢ) / Σcᵢ</span>
 </a><a class="dashboard-card campus-card card-equal" data-tilt="" href="./campus-life.html">
-<img alt="Tree-lined IIT Bombay campus road with auto-rickshaws" onerror="this.style.display='none'" src="./assets/campus-card.webp"/>
+<img alt="Tree-lined IIT Bombay campus road" onerror="this.style.display='none'" src="./assets/campus-card.webp"/>
 <div class="card-shade"></div>
 <div class="card-topline"><span class="card-index">02</span><span class="card-symbol">🏫</span></div>
 <div class="dashboard-card-content">
@@ -429,7 +487,7 @@ body.home #guide-grid > .dashboard-card.card-equal:nth-child(5) {
 <div class="mini-links"><span>Late-night food</span><span>Packing list</span><span>Campus maps</span></div>
 </div>
 </a><a class="dashboard-card transport-card card-equal" data-tilt="" href="./transport.html">
-<img alt="IIT Bombay main gate" onerror="this.style.display='none'" src="./assets/main-gate.webp"/>
+<img alt="Mumbai taxi near the municipal corporation building" onerror="this.style.display='none'" src="./assets/getting-here-hero.webp"/>
 <div class="card-shade"></div>
 <div class="card-topline"><span class="card-index">03</span><span class="card-symbol">🚆</span></div>
 <div class="dashboard-card-content">
@@ -437,7 +495,7 @@ body.home #guide-grid > .dashboard-card.card-equal:nth-child(5) {
 <h2>Getting to IITB</h2>
 <p>Simple arrival routes for freshers travelling with luggage and uncertain plans.</p>
 </div>
-</a><a class="dashboard-card seniors-card card-equal" data-tilt="" href="./seniors.html">
+</a><a class="dashboard-card seniors-card card-equal" data-tilt="" href="./seniors.html"><img alt="IIT Bombay department corridor" onerror="this.style.display='none'" src="./assets/campus-moment-corridor.webp"/><div class="card-shade"></div>
 <div aria-hidden="true" class="portrait-stack physics-peer-stack">
 <span>ψ</span>
 <span>hν</span>
@@ -450,7 +508,7 @@ body.home #guide-grid > .dashboard-card.card-equal:nth-child(5) {
 <p>Search internships, research areas, PoRs and hobbies across the batch.</p>
 </div>
 </a><a class="dashboard-card clubs-card card-equal" data-tilt="" href="./clubs.html">
-<img alt="IIT Bombay main building" onerror="this.style.display='none'" src="./assets/main-building.webp"/>
+<img alt="Colourful student mural near the IIT Bombay SAC area" onerror="this.style.display='none'" src="./assets/clubs-hero.webp"/>
 <div class="card-shade"></div>
 <div class="card-topline"><span class="card-index">05</span><span class="card-symbol">🎭</span></div>
 <div class="dashboard-card-content">
@@ -458,7 +516,7 @@ body.home #guide-grid > .dashboard-card.card-equal:nth-child(5) {
 <h2>Clubs &amp; student life</h2>
 <p>Find the communities you want before orientation-week information overload.</p>
 </div>
-</a><a class="dashboard-card updates-card card-equal" data-tilt="" href="./events.html"><div class="card-shade"></div><div class="card-topline"><span class="card-index">06</span><span class="card-symbol">🔔</span></div><div class="dashboard-card-content"><p class="card-label">Meetings · Webinars · Deadlines</p><h2>Events &amp; updates</h2><p>See timings and add reminders directly to your calendar.</p><div class="mini-links"><span>Meetings</span><span>Webinars</span><span>Deadlines</span></div></div></a><a class="dashboard-card emergency-card card-equal" data-tilt="" href="./emergency.html">
+</a><a class="dashboard-card updates-card card-equal" data-tilt="" href="./events.html"><img alt="Students and auto-rickshaws on a shaded IIT Bombay road" onerror="this.style.display='none'" src="./assets/campus-moment-road.webp"/><div class="card-shade"></div><div class="card-topline"><span class="card-index">06</span><span class="card-symbol">🔔</span></div><div class="dashboard-card-content"><p class="card-label">Meetings · Webinars · Deadlines</p><h2>Events &amp; updates</h2><p>See timings and add reminders directly to your calendar.</p><div class="mini-links"><span>Meetings</span><span>Webinars</span><span>Deadlines</span></div></div></a><a class="dashboard-card emergency-card card-equal" data-tilt="" href="./emergency.html"><img alt="IIT Bombay main gate at night" onerror="this.style.display='none'" src="./assets/home-main-gate.webp"/><div class="card-shade"></div>
 <div aria-hidden="true" class="emergency-rings"></div>
 <div class="card-topline"><span class="card-index">07</span><span class="card-symbol">🚑</span></div>
 <div class="dashboard-card-content">
