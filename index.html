@@ -357,7 +357,16 @@ body.home #guide-grid > .dashboard-card.card-equal:nth-child(5) {
     grid-column: 1 !important;
   }
 }
-</style><style id="homepage-photo-critical">body.home .dashboard-intro{max-width:none;grid-template-columns:minmax(0,1.35fr) minmax(320px,.65fr);align-items:stretch}.home-intro-image{position:relative;min-height:230px;margin:0;overflow:hidden;border:1px solid rgba(95,216,230,.25);border-radius:24px;background:#091426;box-shadow:0 20px 52px rgba(1,5,14,.32)}.home-intro-image img{width:100%;height:100%;object-fit:cover}.home-intro-image figcaption{position:absolute;z-index:2;left:16px;bottom:14px;padding:7px 10px;border:1px solid rgba(255,255,255,.16);border-radius:10px;background:rgba(5,12,24,.7);color:#dce6f2;font-size:.66rem}@media(max-width:800px){body.home .dashboard-intro{grid-template-columns:1fr}}</style></head>
+</style><style id="homepage-photo-critical">
+  body.home .dashboard-intro {
+    display: block;
+    max-width: none;
+  }
+
+  body.home .dashboard-intro > div {
+    max-width: 1150px;
+  }
+</style></head>
 <body class="home physics-dashboard-page">
 <a class="skip-link" href="#guide-grid">Skip to guide</a>
 <div aria-hidden="true" class="physics-sky">
@@ -386,11 +395,17 @@ body.home #guide-grid > .dashboard-card.card-equal:nth-child(5) {
 </nav>
 <main class="dashboard-main">
 <header class="dashboard-intro">
-<div>
-<p class="dashboard-kicker">MSc Physics · IIT Bombay · Batch ’27</p>
-<h1>A fresher’s guide to surviving <span>Master’s life.</span></h1>
-</div>
-<figure aria-label="IIT Bombay Main Gate at night" class="home-intro-image"><img alt="IIT Bombay Main Gate illuminated at night" loading="eager" src="./assets/home-main-gate.webp"/><figcaption>Your first landmark on campus.</figcaption></figure></header>
+  <div>
+    <p class="dashboard-kicker">
+      MSc Physics · IIT Bombay · Batch ’27
+    </p>
+
+    <h1>
+      A fresher’s guide to surviving
+      <span>Master’s life.</span>
+    </h1>
+  </div>
+</header>
 <section aria-label="Fresher guide sections" class="dashboard-grid" id="guide-grid">
 <a class="dashboard-card academic-card card-equal" data-tilt="" href="./academics.html">
 <img alt="Lecture hall at IIT Bombay" onerror="this.style.display='none'" src="./assets/lecture-hall.webp"/>
